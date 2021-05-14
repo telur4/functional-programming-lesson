@@ -98,10 +98,14 @@ console.log(add4(3));
 ```haskell
 -- カリー化(Haskellの場合、定義する関数が自動でカリー化される)
 add x y z = x + y + z
+
+// ラムダ式を使用してカリー化を簡略化する
+add2 = \x -> \y -> \z -> x + y + z
 -- 部分適用
-add2 = add 1
-add3 = add2 2
+add3 = ad2 1
+add4 = add3 2
 
 main = do
-  print $ add3 3
+  print $ add 1 2 3
+  print $ add4 3
 ```
