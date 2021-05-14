@@ -84,9 +84,8 @@ function add(x) {
   }
 }
 console.log(add(1)(2)(3));  // -> 6
-delete add;
 
 // ラムダ式を使用してカリー化を簡略化する
-const add = x => y => z => x + y + z;
-console.log(add(1)(2)(3));  // -> 6
+const add2 = x => y => z => x + y + z;
+console.log(add2(1)(2)(3));  // -> 6
 ```
