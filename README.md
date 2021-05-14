@@ -87,13 +87,18 @@ console.log(add(1)(2)(3));  // -> 6
 
 // ラムダ式を使用してカリー化を簡略化する
 const add2 = x => y => z => x + y + z;
-console.log(add2(1)(2)(3));  // -> 6
+// 部分適用
+const add3 = add2(1);
+const add4 = add3(2);
+
+console.log(add4(3));
 ```
 
 - Haskellでの実装
 ```haskell
 -- カリー化
 add x y z = x + y + z
+-- 部分適用
 add2 = add 1
 add3 = add2 2
 
