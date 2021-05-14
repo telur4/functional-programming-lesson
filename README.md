@@ -74,7 +74,7 @@
   | カプセル化 | 全てが不変のため不変 | データの整合性を保つために必要 |
 
 - JavaScriptでの実装
-```JavaScript
+```javascript
 // カリー化
 function add(x) {
   return function(y) {
@@ -88,4 +88,14 @@ console.log(add(1)(2)(3));  // -> 6
 // ラムダ式を使用してカリー化を簡略化する
 const add2 = x => y => z => x + y + z;
 console.log(add2(1)(2)(3));  // -> 6
+```
+
+- Haskellでの実装
+```haskell
+add x y z = x + y + z
+add2 = add 1
+add3 = add2 2
+
+main = do
+  print $ add3 3
 ```
