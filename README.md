@@ -96,7 +96,7 @@ console.log(add4(3));
 
 - Haskellでの実装
 ```haskell
--- カリー化
+-- カリー化(Haskellの場合、定義する関数が自動でカリー化される)
 add x y z = x + y + z
 -- 部分適用
 add2 = add 1
