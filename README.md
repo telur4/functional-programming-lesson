@@ -83,7 +83,6 @@ function add(x) {
     }
   }
 }
-console.log(add(1)(2)(3));  // -> 6
 
 // ラムダ式を使用してカリー化を簡略化する
 const add2 = x => y => z => x + y + z;
@@ -91,7 +90,8 @@ const add2 = x => y => z => x + y + z;
 const add3 = add2(1);
 const add4 = add3(2);
 
-console.log(add4(3));
+console.log(add(1)(2)(3));  // -> 6
+console.log(add4(3));       // -> 6
 ```
 
 - Haskellでの実装
@@ -102,10 +102,10 @@ add x y z = x + y + z
 -- ラムダ式を使用してカリー化を簡略化する
 add2 = \x -> \y -> \z -> x + y + z
 -- 部分適用
-add3 = ad2 1
+add3 = add2 1
 add4 = add3 2
 
 main = do
-  print $ add 1 2 3
-  print $ add4 3
+  print $ add 1 2 3   -- -> 6
+  print $ add4 3      -- -> 6
 ```
