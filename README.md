@@ -92,6 +92,7 @@ console.log(add2(1)(2)(3));  // -> 6
 
 - Haskellでの実装
 ```haskell
+-- カリー化
 add x y z = x + y + z
 add2 = add 1
 add3 = add2 2
