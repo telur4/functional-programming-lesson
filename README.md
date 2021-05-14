@@ -76,6 +76,16 @@
 - JavaScriptでの実装
 ```JavaScript
 // カリー化
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    }
+  }
+}
+console.log(add(1)(2)(3));  // -> 6
+
+// ラムダ式を使用してカリー化を簡略化する
 const add = x => y => z => x + y + z;
 console.log(add(1)(2)(3));  // -> 6
 ```
