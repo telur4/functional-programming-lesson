@@ -105,6 +105,11 @@ function factorial(num) {
 }
 
 factorial(5);   // -> 120
+
+// ラムダ式を使用した再起関数
+const factorial2 = num => num === 1 ? 1 : num * factorial(num-1);
+
+factorial2(5);  // -> 120
 ```
 
 - Haskellでの実装
