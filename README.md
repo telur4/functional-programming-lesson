@@ -88,6 +88,7 @@ function add(x) {
 
 // ラムダ式を使用してカリー化を簡略化する
 const add2 = x => y => z => x + y + z;
+
 // 部分適用
 const add3 = add2(1);
 const add4 = add3(2);
@@ -96,6 +97,7 @@ console.log(add(1)(2)(3));  // -> 6
 console.log(add4(3));       // -> 6
 
 // 再起関数
+// 引数の階乗を求める関数
 function factorial(num) {
   if (num === 1) {
     return 1;
