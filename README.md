@@ -1,6 +1,6 @@
 # functional-programming-lesson
 
-## 関数型プログラミング　用語集
+## 関数型プログラミング  用語集
 
 - 純粋関数型言語  
 関数型プログラミングに関する機能のみを備えた言語
@@ -102,6 +102,7 @@
   | カプセル化 | 全てが不変のため不変 | データの整合性を保つために必要 |
 
 - JavaScriptでの実装
+
 ```javascript
 // カリー化
 function add(x) {
@@ -141,6 +142,7 @@ factorial2(5);  // -> 120
 ```
 
 - Haskellでの実装
+
 ```haskell
 -- カリー化(Haskellの場合、定義する関数が自動でカリー化される)
 add x y z = x + y + z
